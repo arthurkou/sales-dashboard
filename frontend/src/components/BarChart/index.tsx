@@ -10,7 +10,7 @@ type SeriesData = {
     data: number[];
 }
 
-type BarChart = {
+type ChartData = {
     labels: {
         categories: string[];
     };
@@ -20,7 +20,7 @@ type BarChart = {
 const BarChart = () => {
 
     /* hook = useState - Manter estado no componente */
-    const [barChartData, setBarChartData] = useState<BarChart>({
+    const [barChartData, setBarChartData] = useState<ChartData>({
         labels: {
             categories: []
         },

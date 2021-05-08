@@ -5,14 +5,16 @@ import { SaleSum } from "types/sale";
 import { BASE_URL } from "utils/requests";
 
 type ChartData = {
-    labels: string[], //sellername
-    series: number[]  //sum
+    labels: string[],
+    series: number[]
 }
 
 const DonutChart = () => {
 
+    /* hook = useState - Manter estado no componente */
     const [chartData, setChartData] = useState<ChartData>({ labels: [], series: [] });
 
+    /* hook = useEffect - Executar algo na instanciação ou destruição do componente, observar estado */
     useEffect(() => {
 
         axios.get(`${BASE_URL}/sales/amount-by-seller`)

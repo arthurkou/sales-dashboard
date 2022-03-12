@@ -17,7 +17,7 @@ import com.fullstack.sales.dto.SaleSumDTO;
 import com.fullstack.sales.service.SaleService;
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*")
 @RequestMapping(value = "/sales")
 public class SaleController {
 	
